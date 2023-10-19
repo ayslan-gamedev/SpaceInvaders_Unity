@@ -1,5 +1,11 @@
+/// <summary>
+/// status of a object with life value
+/// </summary>
 public enum LifeStatus { alive, dead };
 
+/// <summary>
+/// Representantion of llife
+/// </summary>
 public struct Life
 {
     public int value;

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// A sampleficated movement system
+/// </summary>
 public class Movement
 {
     /// <summary>
