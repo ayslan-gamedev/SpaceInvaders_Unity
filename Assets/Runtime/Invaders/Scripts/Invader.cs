@@ -5,52 +5,36 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Invader : MonoBehaviour
 {
-    public Movement Movement { get; private set; }
-
     public Sprite[] invaderSprite;
 
-    private byte currentInvaderSprite;
+    public Life Life { get; set; }
+    public Movement Movement { get; set; }
 
     private SpriteRenderer spriteRenderer;
 
-    public bool NextMovementWillExitArea
+    private void Start()
     {
-        get
-        {
-            return gameObject.transform.position.x < 0;
-        }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        Movement = new()
+        Movement = new Movement
         {
             @object = this.gameObject
         };
 
-        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
-        rigidbody2D.freezeRotation = true;
+        Life = new Life
+        {
+            value = 0
+        };
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    /// <summary>
-    /// Make invader move />
-    /// </summary>
-    /// <param name="direction"></param>
-    public void MoveInvader(MovementGemericAtributts movementGemeric)
-    {
-        Movement.Move(movementGemeric);
-        AtualizeCurrentFreame();
-    }
+    private int currentSpriteIndex = 0;
 
     /// <summary>
-    /// Make animation in sprite
+    /// Atualize animation of invader
     /// </summary>
-    private void AtualizeCurrentFreame()
+    public void AtualizeCurrentFrame()
     {
-        spriteRenderer.sprite = invaderSprite[currentInvaderSprite];
-        currentInvaderSprite = (byte)(currentInvaderSprite == 0 ? 1 : 0);
+        spriteRenderer.sprite = invaderSprite[currentSpriteIndex];
+        currentSpriteIndex = (currentSpriteIndex + 1) % invaderSprite.Length;
     }
 }

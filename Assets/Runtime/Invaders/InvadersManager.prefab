@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2627200724693836621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4453685606235199145}
+  - component: {fileID: 6709811210026227035}
+  m_Layer: 0
+  m_Name: InvadersManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4453685606235199145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2627200724693836621}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6709811210026227035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2627200724693836621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefd1c93df1f5834ebe9b392eaff2ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundYValue: -10
+  onInvadersToutchGound:
+    m_PersistentCalls:
+      m_Calls: []
+  InvadersToCreate:
+  - {fileID: 3305023470459207541, guid: b581bb74b128d8c4586396f8571698ef, type: 3}
+  - {fileID: 3305023470459207541, guid: b581bb74b128d8c4586396f8571698ef, type: 3}
+  - {fileID: 5209706703485051543, guid: 5d1302f3f1432b94fa9e4bb272137660, type: 3}
+  - {fileID: 5209706703485051543, guid: 5d1302f3f1432b94fa9e4bb272137660, type: 3}
+  - {fileID: 3053298935687315936, guid: b4e5192de6d707040bcdf2b283f91014, type: 3}
+  - {fileID: 3053298935687315936, guid: b4e5192de6d707040bcdf2b283f91014, type: 3}
+  collunsToCreate: 12
+  startPositionToInstantiate: {x: -4.5, y: 5}
+  spaceBettewnInvadersColluns: 0.8
+  spaceBettewnInvadersLines: 0.8
+  invaderInstantiateDelay: 50
+  invaderLimitDistance: 8
+  invaderMovementSpeed: 0.8
+  movementInvaderDelay: 100

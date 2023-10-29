@@ -19,15 +19,6 @@ public class Movement
     /// <summary>
     /// Movement object by game scene
     /// </summary>
-    /// <param name="MovementAtributts">All variables to movement</param>
-    public void Move(MovementGemericAtributts MovementAtributts)
-    {
-        Move(MovementAtributts.direction, MovementAtributts.speed, MovementAtributts.suavizeMovement, MovementAtributts.maxMovementLimit, MovementAtributts.maxMovementLimit);
-    }
-
-    /// <summary>
-    /// Movement object by game scene
-    /// </summary>
     /// <param name="direction"> direction to move </param>
     /// <param name="speed"> speed of movement </param>
     /// <param name="suavizeMovement"> use time.deltatime or not </param>

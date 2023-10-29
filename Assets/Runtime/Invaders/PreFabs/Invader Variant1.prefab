@@ -45,6 +45,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5228841422386212096, guid: 4647f10eac118284f9b88448c705d709, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228841422386212096, guid: 4647f10eac118284f9b88448c705d709, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
       objectReference: {fileID: 0}
@@ -114,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8801888445663676512, guid: 4647f10eac118284f9b88448c705d709, type: 3}
       propertyPath: m_Name
-      value: Invader Variant
+      value: Invader Variant1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
