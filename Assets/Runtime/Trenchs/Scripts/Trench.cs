@@ -139,10 +139,10 @@ public class Trench : MonoBehaviour
                 $"PixelCollider2D could not be regenerated because on \"{PolygonCollider2D.gameObject.name}\" because the sprite does not allow read/write operations.");
         }
 
-        List<List<Vector2Int>> Pixel_Paths = Get_Unit_Paths(SpriteRender.sprite.texture, alphaCutoff);
-        Pixel_Paths = Simplify_Paths_Phase_1(Pixel_Paths);
+        List<List<Vector2Int>> Pixel_Paths = GetUnitPaths(SpriteRender.sprite.texture, alphaCutoff);
+        Pixel_Paths = SimplifyPaths(Pixel_Paths);
 
-        List<List<Vector2>> World_Paths = Finalize_Paths(Pixel_Paths, SpriteRender.sprite);
+        List<List<Vector2>> World_Paths = FinalizePaths(Pixel_Paths, SpriteRender.sprite);
         PolygonCollider2D.pathCount = World_Paths.Count;
 
         for(int i = 0; i < World_Paths.Count; i++)
@@ -151,7 +151,7 @@ public class Trench : MonoBehaviour
         }
     }
 
-    private List<List<Vector2>> Finalize_Paths(List<List<Vector2Int>> Pixel_Paths, Sprite sprite)
+    private List<List<Vector2>> FinalizePaths(List<List<Vector2Int>> Pixel_Paths, Sprite sprite)
     {
         var tex = sprite.texture;
 
@@ -182,7 +182,7 @@ public class Trench : MonoBehaviour
         return Output;
     }
 
-    private static List<List<Vector2Int>> Simplify_Paths_Phase_1(List<List<Vector2Int>> Unit_Paths)
+    private static List<List<Vector2Int>> SimplifyPaths(List<List<Vector2Int>> Unit_Paths)
     {
         List<List<Vector2Int>> Output = new();
         while(Unit_Paths.Count > 0)
@@ -278,7 +278,7 @@ public class Trench : MonoBehaviour
         return Output;
     }
 
-    private static List<List<Vector2Int>> Get_Unit_Paths(Texture2D texture, float alphaCutoff)
+    private static List<List<Vector2Int>> GetUnitPaths(Texture2D texture, float alphaCutoff)
     {
         List<List<Vector2Int>> Output = new();
         for(int x = 0; x < texture.width; x++)
